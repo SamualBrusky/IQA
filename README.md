@@ -4,14 +4,24 @@ Trading Analyzer for $SPY. This is a combination of different ideas like [Bracke
 # Requirements
  - [Alpaca.API](https://github.com/alpacahq/alpaca-trade-api-python)
  - [StatsModels](https://github.com/statsmodels/statsmodels)
- - import json
-import os
-from math import sqrt
-import requests
 
-# Third Party
-import pandas as pd
-from statsmodels.tsa.arima.model import ARIMA
-from pandas import DataFrame
-from sklearn.metrics import mean_squared_error
-import alpaca_trade_api as tradeapi
+# Updates
+ - v1.0.0
+    - APPL_Stock_Predictor.py
+    - APPLHISTORY.py
+    - BracketOrderRequest.py
+    - Bracket_Order_TSLA.py
+    - Bracket_TSLA.py
+    - Machine_Learning_Test_1.py
+    - TradingBotTest.py
+    - UniTest.py
+    - config.py
+      
+
+ 
+  
+ 
+
+  
+
+   
