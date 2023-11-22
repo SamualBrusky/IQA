@@ -2,6 +2,7 @@
 import json
 import os
 from math import sqrt
+from pydoc import HTMLRepr
 import requests
 
 # Third Party
@@ -11,6 +12,7 @@ from pandas import DataFrame
 from sklearn.metrics import mean_squared_error
 import alpaca_trade_api as tradeapi
 import numpy as np
+from alpaca_trade_api import REST
 
 #Data
 
@@ -18,8 +20,12 @@ import numpy as np
 BASE_URL = "https://paper-api.alpaca.markets"
 ACCOUNT_URL = "{}/v2/account".format(BASE_URL)
 ORDERS_URL = "{}/v2/orders".format(BASE_URL)
-HEADERS = {'PKFQM1PVOX0PAU912RL7': os.getenv('PKFQM1PVOX0PAU912RL7'), 'ny42XrA0irhWH6iBhignGaHFokP1hPjtCpX1gwMe': os.getenv('ny42XrA0irhWH6iBhignGaHFokP1hPjtCpX1gwMe')}
+# HEADERS = {'PKFQM1PVOX0PAU912RL7': os.getenv('PKFQM1PVOX0PAU912RL7'), 'ny42XrA0irhWH6iBhignGaHFokP1hPjtCpX1gwMe': os.getenv('ny42XrA0irhWH6iBhignGaHFokP1hPjtCpX1gwMe')}
+APCA_API_KEY_ID = 'PKUZ2L3UZHWU015HWQ7A'
+API_SECRET = 'd5egbn3MDM7aiSzhlIfezlHr6EZJsFCzDcyRqfes'
+BASE_URL = 'https://paper-api.alpaca.markets'
 
+alpaca = tradeapi.REST(APCA_API_KEY_ID, API_SECRET, BASE_URL)
 class Analyzer:
     def __init__(self, pathToData: str) -> None:
         super().__init__()
@@ -82,12 +88,12 @@ class Analyzer:
             "time_in_force": time_in_force
         }
 
-        r = requests.post(ORDERS_URL, json=data, headers=HEADERS)
+        r = requests.post(ORDERS_URL, json=data, headers=tradeapi)
 
         return json.loads(r.content)
 
     def get_orders(self):
-        r = requests.get(ORDERS_URL, headers=HEADERS)
+        r = requests.get(ORDERS_URL, headers=tradeapi)
         return json.loads(r.content)
 
     def get_current_day_price(self, symbol):
