@@ -26,8 +26,8 @@ Trading Analyzer for $SPY. This is a combination of different ideas like [Bracke
     - TradingBotTest.py
     - UniTest.py
     - config.py
-    - ARIMA_TEST_1.py (added(Not working))
-    - analyzer.py (added(Not working)) 
+    - ARIMA_TEST_1.py (added(API account access not working))
+    - analyzer.py (added(API account access not working)) 
       
 
  
