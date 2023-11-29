@@ -27,7 +27,21 @@ Trading Analyzer for $SPY. This is a combination of different ideas like [Bracke
     - UniTest.py
     - config.py
     - ARIMA_TEST_1.py (added(API account access not working))
-    - analyzer.py (added(API account access not working)) 
+    - analyzer.py (added(API account access not working))
+ - v1.1.0
+    - APPL_Stock_Predictor.py (Deleted)
+    - APPLHISTORY.py (Deleted)
+    - BracketOrderRequest.py
+    - Bracket_Order_TSLA.py (Deleted)
+    - Bracket_TSLA.py (Deleted)
+    - Machine_Learning_Test_1.py (Deleted)
+    - TradingBotTest.py (Deleted)
+    - UniTest.py
+    - config.py
+    - ARIMA_TEST_1.py (Deleted) 
+    - analyzer.py (Deleted)
+    - ARIMA_Trader.py (Prediction works with max time data)
+ 
       
 
  
