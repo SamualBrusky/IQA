@@ -10,7 +10,9 @@ Trading Analyzer for $SPY. This is a combination of different ideas like [Bracke
     - ARIMA_Trader.py
     - BracketOrderRequest.py
     - config.py
- 
+
+ # Dev Notes
+  - P,D,Q is not yet set to prefered value
       
 
  
