@@ -8,8 +8,8 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 
 # Alpaca API credentials
-APCA_API_KEY_ID = 'PKEL9JZHFT4FKBKS70EH'
-APCA_API_SECRET_KEY = 'LYV8zGzxCay9UALgD9CStIY6rFFNl3s3aTgrNwzm'
+APCA_API_KEY_ID = 'YOUR_KEY_ID'
+APCA_API_SECRET_KEY = 'YOUR_SECRET_KEY'
 BASE_URL = 'https://paper-api.alpaca.markets'
 ORDERS_URL = f'{BASE_URL}/v2/orders'
 HEADERS = {'APCA-API-KEY-ID': APCA_API_KEY_ID, 'APCA-API-SECRET-KEY': APCA_API_SECRET_KEY}
