@@ -8,8 +8,8 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 
 # Alpaca API credentials
-APCA_API_KEY_ID = 'YOUR_KEY_ID'
-APCA_API_SECRET_KEY = 'YOUR_SECRET_KEY'
+APCA_API_KEY_ID = 'PKEL9JZHFT4FKBKS70EH'
+APCA_API_SECRET_KEY = 'LYV8zGzxCay9UALgD9CStIY6rFFNl3s3aTgrNwzm'
 BASE_URL = 'https://paper-api.alpaca.markets'
 ORDERS_URL = f'{BASE_URL}/v2/orders'
 HEADERS = {'APCA-API-KEY-ID': APCA_API_KEY_ID, 'APCA-API-SECRET-KEY': APCA_API_SECRET_KEY}
@@ -22,7 +22,7 @@ class ARIMATrader:
         self.df = pd.read_csv(path_to_data, index_col='Date', parse_dates=True)
         self.df = self.df.asfreq('D')
         self.model = ARIMA(self.df.Close, order=(10, 1, 10))
-        self.model_fit = self.model.fit()
+        self.model_fit = self.model.fit(method_kwargs={'maxiter':10000})
         self.predictions = []
     
     def predict(self):
@@ -108,5 +108,6 @@ if __name__ == '__main__':
     trader = ARIMATrader(symbol='SPY', path_to_data='C:\\Users\\sbrus\\Downloads\\SPY (11).csv')
 
     trader.trade()
+
 
 
