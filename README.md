@@ -8,11 +8,11 @@ Trading Analyzer for $SPY. This is a combination of different ideas like [Bracke
 # Updates
  - v1.0.0
     - ARIMA_Trader.py
-    - BracketOrderRequest.py
-    - config.py
+    - ARIMA_Test_1.py 
 
  # Dev Notes
   - P,D,Q is not yet set to prefered value
+  - in v1.2.0-beta-1, data collection is done through Alpaca instead of a CSV. meaning more accurate results!
       
 
  
