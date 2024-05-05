@@ -6,8 +6,8 @@ import subprocess
 import alpaca_trade_api as tradeapi
 
 # Alpaca API credentials
-APCA_API_KEY_ID = 'PKDWJ6MXKGXRG6HTPDPP'
-APCA_API_SECRET_KEY = 'xmFzrJDkVU2KW9C2tafwCsNggeLqxSphuaRdRqah'
+APCA_API_KEY_ID = ''
+APCA_API_SECRET_KEY = ''
 BASE_URL = 'https://paper-api.alpaca.markets'
 ORDERS_URL = f'{BASE_URL}/v2/orders'
 HEADERS = {'APCA-API-KEY-ID': APCA_API_KEY_ID, 'APCA-API-SECRET-KEY': APCA_API_SECRET_KEY}
@@ -22,8 +22,8 @@ def get_stock_data(symbol, start_date, end_date):
 
 # Function to run R script for ARIMA prediction
 def run_r_script():
-    r_script_path = r"C:\\Program Files\\R\\R-4.3.3\\bin\\Rscript.exe"
-    prediction_script_path = r"C:\\Users\\sbrus\\OneDrive\\Documents\\GitHub\\Fiequn.com\\ECON\\v1.3.0\\Prediction.R"
+    r_script_path = r""
+    prediction_script_path = r""
     subprocess.run([r_script_path, prediction_script_path])
 
 # Function to read prediction from file
