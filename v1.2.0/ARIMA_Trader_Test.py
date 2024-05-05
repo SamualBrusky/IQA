@@ -11,8 +11,8 @@ from alpaca_trade_api import REST, TimeFrame
 def ARIMATrade_Web():
 
 # Alpaca API credentials
-    APCA_API_KEY_ID = 'PKK6ELKSXUJBT67ECJAT'
-    APCA_API_SECRET_KEY = '0NEItQlaS4g59lEyfOpQVsJvog5PGkfCCVu0AlnM'
+    APCA_API_KEY_ID = ''
+    APCA_API_SECRET_KEY = ''
     BASE_URL = 'https://paper-api.alpaca.markets'
     ORDERS_URL = f'{BASE_URL}/v2/orders'
     HEADERS = {'APCA-API-KEY-ID': APCA_API_KEY_ID, 'APCA-API-SECRET-KEY': APCA_API_SECRET_KEY}
